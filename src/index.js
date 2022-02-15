@@ -11,7 +11,7 @@ import { FooterS } from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-axios.defaults.baseURL = 'https://backend-blueteco.herokuapp.com/';
+axios.defaults.baseURL = 'https://backend-blueteco.herokuapp.com/'
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
