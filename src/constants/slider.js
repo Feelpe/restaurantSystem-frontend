@@ -6,15 +6,15 @@ export const info = [
     subtitle: 'Uma coletânea dos pratos mais famosos do Brasil.',
   },
   {
-    img: 'https://www.sabornamesa.com.br/media/k2/items/cache/e3cae036c4e2bea1fb8b65e8b2938a97_XL.jpg',
-    alt: 'México',
-    title: 'Comida Mexicana',
-    subtitle: 'Uma coletânea dos pratos mais famosos do México.',
+    img: 'https://guiaassettiradentes.files.wordpress.com/2016/06/comida-mineira.jpg',
+    alt: 'Minas Gerais',
+    title: 'Comida Mineira',
+    subtitle: 'Uma coletânea dos pratos mais famosos de Minas Gerais.',
   },
   {
-    img: 'https://www.buenasdicas.com/wp-content/uploads/2016/10/anticuchos-comidas-tipicas-bolivia.jpg',
-    alt: 'Bolivia',
-    title: 'Comida Boliviana',
-    subtitle: 'Uma coletânea dos pratos mais famosos da Bolivia.',
+    img: 'https://i.pinimg.com/originals/0d/99/a1/0d99a1b80c12e4afe667f46b5be4f0a9.jpg',
+    alt: 'Bahia',
+    title: 'Comida Bahiana',
+    subtitle: 'Uma coletânea dos pratos mais famosos da Bahia.',
   },
 ];

@@ -7,10 +7,12 @@ export const CardS = styled(Card)`
   background-color: #965d62;
   color: #f2d974;
   border: none;
-  border-radius: 5rem;
+  border-radius: 1rem;
   padding: 1rem;
+  box-shadow: 2px 2px 0.3em #00000050;
 
   img {
-    border-radius: 2.5rem;
+    border-radius: 0.2rem;
+    transform: scale(1.1)
   }
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Link } from 'react-bootstrap';
 
 const NavbarC = styled(Navbar)`
   background-color: #2b222c;
@@ -11,17 +11,25 @@ const NavbarC = styled(Navbar)`
   }
 `;
 
+const NavbarT = styled(Navbar)`
+  color: #f2d974;
+`;
+
+const LinkS = styled(Link)`
+  color: #f2d974;
+`;
+
 export const NavbarS = () => {
   return (
     <NavbarC expand="lg">
       <Container>
-          <Navbar.Brand href="/">Restaurante</Navbar.Brand>
+          <NavbarT.Brand href="/">Restaurante</NavbarT.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/login">Entre</Nav.Link>
-              <Nav.Link href="/register">Cadastre-se</Nav.Link>
-              <Nav.Link href="/profile">Usuário</Nav.Link>
+              <Nav.LinkS href="/login">Entre</Nav.LinkS>
+              <Nav.LinkS href="/register">Cadastre-se</Nav.LinkS>
+              <Nav.LinkS href="/profile">Usuário</Nav.LinkS>
             </Nav>
           </Navbar.Collapse>
       </Container>
