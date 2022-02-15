@@ -11,26 +11,18 @@ const NavbarC = styled(Navbar)`
   }
 `;
 
-const NavbarT = styled(Navbar)`
-  color: #f2d974;
-`;
-
-const NavS = styled(Nav)`
-  color: #f2d974;
-`;
-
 export const NavbarS = () => {
   return (
     <NavbarC expand="lg">
       <Container>
-          <NavbarT.Brand href="/">Restaurante</NavbarT.Brand>
+          <Navbar.Brand style="color: #f2d974" href="/">Restaurante</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <NavS className="me-auto">
-              <Nav.Link href="/login">Entre</Nav.Link>
-              <Nav.Link href="/register">Cadastre-se</Nav.Link>
-              <Nav.Link href="/profile">Usuário</Nav.Link>
-            </NavS>
+            <Nav className="me-auto">
+              <Nav.Link style="color: #f2d974" href="/login">Entre</Nav.Link>
+              <Nav.Link style="color: #f2d974" href="/register">Cadastre-se</Nav.Link>
+              <Nav.Link style="color: #f2d974" href="/profile">Usuário</Nav.Link>
+            </Nav>
           </Navbar.Collapse>
       </Container>
     </NavbarC>
