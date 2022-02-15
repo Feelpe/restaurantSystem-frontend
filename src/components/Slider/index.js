@@ -29,13 +29,15 @@ const Caption = styled(Carousel.Caption)`
   flex-direction: column;
 
   h3 {
-    background-color: #00000099;
-    padding: 0.4rem;
+    background-color: #00000080;
+    padding: 0.2rem;
+    border-radius: 5%;
   }
 
   p {
-    background-color: #00000099;
-    padding: 0.4rem;
+    background-color: #00000080;
+    padding: 0.2rem;
+    border-radius: 5%;
   }
 `;
 

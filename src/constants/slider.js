@@ -1,6 +1,6 @@
 export const info = [
   {
-    img: 'https://moonbh.com.br/wp-content/uploads/2018/02/IMG_2734.jpg',
+    img: 'https://i2.wp.com/files.agro20.com.br/uploads/2020/03/comidabrasileira3.jpg?fit=1024%2C585&ssl=1',
     alt: 'Brasil',
     title: 'Comida Brasileira',
     subtitle: 'Uma coletânea dos pratos mais famosos do Brasil.',
@@ -12,7 +12,7 @@ export const info = [
     subtitle: 'Uma coletânea dos pratos mais famosos do México.',
   },
   {
-    img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/58/39/0a/silpancho.jpg',
+    img: 'https://www.buenasdicas.com/wp-content/uploads/2016/10/anticuchos-comidas-tipicas-bolivia.jpg',
     alt: 'Bolivia',
     title: 'Comida Boliviana',
     subtitle: 'Uma coletânea dos pratos mais famosos da Bolivia.',

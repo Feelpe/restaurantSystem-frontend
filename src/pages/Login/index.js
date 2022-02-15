@@ -1,7 +1,8 @@
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { PageTitle } from '../../components/PageTitle';
 import { useState } from 'react';
 import { ContainerS } from '../../components/ContainerForm';
+import { ButtonS } from '../../components/Button'
 import axios from 'axios';
 
 export const Login = () => {
@@ -48,9 +49,9 @@ export const Login = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <ButtonS type="submit">
           Entrar
-        </Button>
+        </ButtonS>
       </Form>
     </ContainerS>
   );

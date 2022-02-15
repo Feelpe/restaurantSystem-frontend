@@ -4,13 +4,13 @@ import { Form, FormControl, Container } from 'react-bootstrap';
 
 const ContainerS = styled.div`
   background-color: #f8f8f8;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   button {
     background-color: #f8f8f8;
     border: none;
     font-size: 1.5rem;
-    color: #017bff;
+    color: #39324d;
   }
 `;
 

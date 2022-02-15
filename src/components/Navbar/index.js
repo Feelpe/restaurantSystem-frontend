@@ -1,8 +1,18 @@
+import styled from 'styled-components';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+
+const NavbarC = styled(Navbar)`
+  background-color: #c22557;
+  font-weight: 600;
+
+  button{
+    box-shadow: 2px 2px 0.3em black;
+  }
+`;
 
 export const NavbarS = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <NavbarC expand="lg">
       <Container>
         <Navbar.Brand href="/">Restaurante</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -14,6 +24,6 @@ export const NavbarS = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </NavbarC>
   );
 };

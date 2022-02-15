@@ -1,6 +1,8 @@
 import { ContainerS } from '../../components/ContainerForm';
 import { PageTitle } from '../../components/PageTitle';
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import { RowS } from '../../components/ContainerForm';
+import { ButtonS } from '../../components/Button';
+import { Form, Col } from 'react-bootstrap';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -36,18 +38,18 @@ export const Register = () => {
     <ContainerS>
       <PageTitle>Criar uma Conta</PageTitle>
       <Form onSubmit={handleSubmit}>
-        <Form.Group as={Col}>
-          <Form.Label>Email</Form.Label>
-          <Form.Control 
-            type='email' 
-            placeholder='Email' 
-            onChange={(event) => setEmail(event.target.value)} 
-          />
-        </Form.Group>
-
-        <Row>
+        <RowS>
           <Form.Group as={Col}>
-            <Form.Label>Nome</Form.Label>
+            <Form.Control 
+              type='email' 
+              placeholder='Email' 
+              onChange={(event) => setEmail(event.target.value)} 
+            />
+          </Form.Group>
+        </RowS>
+
+        <RowS>
+          <Form.Group as={Col}>
             <Form.Control
               type="text"
               placeholder="Nome"
@@ -56,18 +58,16 @@ export const Register = () => {
           </Form.Group>
 
           <Form.Group as={Col}>
-            <Form.Label>Sobrenome</Form.Label>
             <Form.Control
               type="text"
               placeholder="Sobrenome"
               onChange={(event) => setLastName(event.target.value)}
             />
           </Form.Group>
-        </Row>
+        </RowS>
 
-        <Row>
+        <RowS>
           <Form.Group as={Col}>
-            <Form.Label>Senha</Form.Label>
             <Form.Control
               type="password"
               placeholder="Senha"
@@ -75,18 +75,17 @@ export const Register = () => {
             />
           </Form.Group>
           <Form.Group as={Col}>
-            <Form.Label>Confirmação da senha</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirmação da senha"
               onChange={(event) => setPasswordConfirmation(event.target.value)}
             />
           </Form.Group>
-        </Row>
+        </RowS>
 
-        <Button variant="primary" type="submit">
+        <ButtonS variant="primary" type="submit">
           Criar
-        </Button>
+        </ButtonS>
       </Form>
     </ContainerS>
   )
