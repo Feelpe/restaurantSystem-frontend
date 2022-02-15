@@ -6,7 +6,11 @@ export const CardS = styled(Card)`
   width: 17rem;
   background-color: #965d62;
   color: #f2d974;
-  border-color: #f2d974;
-  border-radius: 25%;
+  border: none;
+  border-radius: 5rem;
   padding: 1rem;
+
+  img {
+    border-radius: 2.5rem;
+  }
 `;
