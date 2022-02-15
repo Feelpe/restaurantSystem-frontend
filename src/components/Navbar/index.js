@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const NavbarC = styled(Navbar)`
-  background-color: #a27879;
+  background-color: #2b222c;
   font-weight: 600;
 
   button{
@@ -11,13 +11,7 @@ const NavbarC = styled(Navbar)`
 `;
 
 const Social = styled.div`
-  font-size: 2rem;
-
-  href {
-    color: #faefc2;
-    margin: 0.25rem;
-    text-decoration: none;
-  }
+  color: #f2d974;
 `;
 
 export const NavbarS = () => {
