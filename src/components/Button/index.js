@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 
 export const ButtonS = styled(Button)`
-  background-color: #504375;
+  background-color: #a4ac9d;
   border: none;
 
   :hover{
-    background-color: #39324d;
+    background-color: #faefc2;
   }
 `;

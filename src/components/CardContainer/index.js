@@ -6,4 +6,5 @@ export const CardContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 4rem 0 8rem 0;
+  background-color: #faefc2;
 `;

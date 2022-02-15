@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 
 const Footer = styled.div`
-  background-color: #c22557;
+  background-color: #a4626c;
   color: #fff;
   padding: 0.3rem;
   display: flex;
@@ -22,7 +22,7 @@ const Social = styled.div`
   font-size: 2rem;
 
   a {
-    color: #fff;
+    color: #faefc2;
     margin: 0.25rem;
     text-decoration: none;
   }

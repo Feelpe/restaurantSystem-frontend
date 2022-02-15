@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const NavbarC = styled(Navbar)`
-  background-color: #c22557;
+  background-color: #a27879;
   font-weight: 600;
 
   button{
@@ -10,19 +10,31 @@ const NavbarC = styled(Navbar)`
   }
 `;
 
+const Social = styled.div`
+  font-size: 2rem;
+
+  href {
+    color: #faefc2;
+    margin: 0.25rem;
+    text-decoration: none;
+  }
+`;
+
 export const NavbarS = () => {
   return (
     <NavbarC expand="lg">
       <Container>
-        <Navbar.Brand href="/">Restaurante</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/login">Entre</Nav.Link>
-            <Nav.Link href="/register">Cadastre-se</Nav.Link>
-            <Nav.Link href="/profile">Usuário</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Social>
+          <Navbar.Brand href="/">Restaurante</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/login">Entre</Nav.Link>
+              <Nav.Link href="/register">Cadastre-se</Nav.Link>
+              <Nav.Link href="/profile">Usuário</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Social>
       </Container>
     </NavbarC>
   );
