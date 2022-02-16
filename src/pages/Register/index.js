@@ -83,7 +83,7 @@ export const Register = () => {
           </Form.Group>
         </RowS>
 
-        <ButtonS variant="primary" type="submit">
+        <ButtonS type="submit">
           Criar
         </ButtonS>
       </Form>

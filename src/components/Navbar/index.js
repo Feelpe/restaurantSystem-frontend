@@ -1,31 +1,49 @@
 import styled from 'styled-components';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { MdOutlineFoodBank } from 'react-icons/md';
 
 const NavbarC = styled(Navbar)`
   background-color: #2b222c;
   font-weight: 600;
-  color: #f2d974;
 
   button{
-    box-shadow: 2px 2px 0.3em black;
+    background-color: #965d62;
+    border: #5e435250;
+    margin: 0.5rem;
+
+    :hover{
+      background-color: #c7956d;
+    }
   }
 `;
 
 const ContainerS = styled(Container)`
-  color: #f2d974;
-`; 
+  align-items: center;
+
+  a {
+    color: #f2d974;
+    margin: 0.35rem;
+    text-decoration: none;
+  }
+`;
+
+const MdOutlineFoodBankS = styled(MdOutlineFoodBank)`
+  margin: 0rem 1rem 0rem 0rem;
+  padding: 0rem;
+  font-size: 2.5rem;
+`;
 
 export const NavbarS = () => {
   return (
     <NavbarC expand="lg">
       <ContainerS>
-          <Navbar.Brand style="color: #f2d974" href="/">Restaurante</Navbar.Brand>
+          <a href="/"><MdOutlineFoodBankS /></a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/profile">Usuário</Nav.Link>
-              <Nav.Link href="/login">Entre</Nav.Link>
-              <Nav.Link href="/register">Cadastre-se</Nav.Link>
+              <a href="/profile">Usuário</a>
+              <a href="/login">Entre</a>
+              <a href="/register">Cadastre-se</a>
             </Nav>
           </Navbar.Collapse>
       </ContainerS>

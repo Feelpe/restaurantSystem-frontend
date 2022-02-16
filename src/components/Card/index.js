@@ -9,10 +9,15 @@ export const CardS = styled(Card)`
   border: none;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 2px 2px 0.3em #00000050;
+  box-shadow: 2px 2px 0.5em #00000090;
 
   img {
-    border-radius: 0.2rem;
-    transform: scale(1.1)
+    border-radius: 0.7rem;
+
   }
+
+  :hover {
+      transition: transform 500ms;
+      transform: scale(1.1)
+    }
 `;
