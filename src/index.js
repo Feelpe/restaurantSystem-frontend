@@ -5,7 +5,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Menu } from './pages/Menu';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
-import { Profile } from './pages/Profile';
+import { Profile } from './pages/Profile/view';
+import { Update } from './pages/Profile/update';
+import { Delete } from './pages/Profile/delete'
 import { NavbarS } from './components/Navbar';
 import { FooterS } from './components/Footer';
 
@@ -23,6 +25,8 @@ ReactDOM.render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/update" element={<Update />} />
+        <Route path="/delete" element={<Delete />} />
       </Routes>
     </BrowserRouter>
     <FooterS />

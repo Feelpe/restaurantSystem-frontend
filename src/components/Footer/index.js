@@ -15,7 +15,7 @@ const Footer = styled.div`
   justify-content: center;
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Social = styled.div`

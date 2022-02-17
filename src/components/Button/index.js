@@ -10,9 +10,4 @@ export const ButtonS = styled(Button)`
     background-color: #c7956d;
     transform: scale(1.1)
   }
-
-  .btn-primary {
-    background-color: #c7956d;
-    border-color: #f2d974;
-  }
 `;
