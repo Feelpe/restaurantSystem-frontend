@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Navbar } from 'react-bootstrap';
 import {
   FaInstagramSquare,
   FaFacebookSquare,
@@ -6,15 +7,12 @@ import {
   FaLinkedin,
 } from 'react-icons/fa';
 
-const Footer = styled.div`
+const Footer = styled(Navbar)`
   background-color: #5e4352;
   color: #fff;
   padding: 0.3rem;
-  display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 `;
 
@@ -30,7 +28,7 @@ const Social = styled.div`
 
 export const FooterS = () => {
   return (
-    <Footer>
+    <Footer expand="lg">
       <Social>
         <a href="!#">
           <FaInstagramSquare />

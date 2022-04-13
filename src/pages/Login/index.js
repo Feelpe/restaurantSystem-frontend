@@ -1,7 +1,7 @@
 import { Form } from 'react-bootstrap';
 import { PageTitle } from '../../components/PageTitle';
 import { useState } from 'react';
-import { ContainerS } from '../../components/ContainerForm';
+import { ContainerS, Section } from '../../components/ContainerForm';
 import { ButtonS } from '../../components/Button'
 import axios from 'axios';
 
@@ -29,30 +29,32 @@ export const Login = () => {
   };
 
   return (
-    <ContainerS>
-      <PageTitle>Login</PageTitle>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control
-            type="email"
-            placeholder="Digite o email"
-            onChange={(event) => setEmail(event.target.value)}
-            required
-          />
-        </Form.Group>
+    <Section>
+      <ContainerS>
+        <PageTitle>Login</PageTitle>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              placeholder="Digite o email"
+              onChange={(event) => setEmail(event.target.value)}
+              required
+            />
+          </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Control
-            type="password"
-            placeholder="Digite a senha"
-            onChange={(event) => setPassword(event.target.value)}
-            required
-          />
-        </Form.Group>
-        <ButtonS type="submit">
-          Entrar
-        </ButtonS>
-      </Form>
-    </ContainerS>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Digite a senha"
+              onChange={(event) => setPassword(event.target.value)}
+              required
+            />
+          </Form.Group>
+          <ButtonS type="submit">
+            Entrar
+          </ButtonS>
+        </Form>
+      </ContainerS>
+    </Section>
   );
 };

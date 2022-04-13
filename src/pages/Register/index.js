@@ -1,4 +1,4 @@
-import { ContainerS } from '../../components/ContainerForm';
+import { ContainerS, Section } from '../../components/ContainerForm';
 import { PageTitle } from '../../components/PageTitle';
 import { RowS } from '../../components/ContainerForm';
 import { ButtonS } from '../../components/Button';
@@ -35,58 +35,60 @@ export const Register = () => {
   };
 
   return (
-    <ContainerS>
-      <PageTitle>Criar uma Conta</PageTitle>
-      <Form onSubmit={handleSubmit}>
-        <RowS>
-          <Form.Group as={Col}>
-            <Form.Control 
-              type='email' 
-              placeholder='Email' 
-              onChange={(event) => setEmail(event.target.value)} 
-            />
-          </Form.Group>
-        </RowS>
+    <Section>
+      <ContainerS>
+        <PageTitle>Criar uma Conta</PageTitle>
+        <Form onSubmit={handleSubmit}>
+          <RowS>
+            <Form.Group as={Col}>
+              <Form.Control 
+                type='email' 
+                placeholder='Email' 
+                onChange={(event) => setEmail(event.target.value)} 
+              />
+            </Form.Group>
+          </RowS>
 
-        <RowS>
-          <Form.Group as={Col}>
-            <Form.Control
-              type="text"
-              placeholder="Nome"
-              onChange={(event) => setFirstName(event.target.value)}
-            />
-          </Form.Group>
+          <RowS>
+            <Form.Group as={Col}>
+              <Form.Control
+                type="text"
+                placeholder="Nome"
+                onChange={(event) => setFirstName(event.target.value)}
+              />
+            </Form.Group>
 
-          <Form.Group as={Col}>
-            <Form.Control
-              type="text"
-              placeholder="Sobrenome"
-              onChange={(event) => setLastName(event.target.value)}
-            />
-          </Form.Group>
-        </RowS>
+            <Form.Group as={Col}>
+              <Form.Control
+                type="text"
+                placeholder="Sobrenome"
+                onChange={(event) => setLastName(event.target.value)}
+              />
+            </Form.Group>
+          </RowS>
 
-        <RowS>
-          <Form.Group as={Col}>
-            <Form.Control
-              type="password"
-              placeholder="Senha"
-              onChange={(event) => setPassword(event.target.value)}
-            />
-          </Form.Group>
-          <Form.Group as={Col}>
-            <Form.Control
-              type="password"
-              placeholder="Confirmação da senha"
-              onChange={(event) => setPasswordConfirmation(event.target.value)}
-            />
-          </Form.Group>
-        </RowS>
+          <RowS>
+            <Form.Group as={Col}>
+              <Form.Control
+                type="password"
+                placeholder="Senha"
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </Form.Group>
+            <Form.Group as={Col}>
+              <Form.Control
+                type="password"
+                placeholder="Confirmação da senha"
+                onChange={(event) => setPasswordConfirmation(event.target.value)}
+              />
+            </Form.Group>
+          </RowS>
 
-        <ButtonS type="submit">
-          Criar
-        </ButtonS>
-      </Form>
-    </ContainerS>
+          <ButtonS type="submit">
+            Criar
+          </ButtonS>
+        </Form>
+      </ContainerS>
+    </Section>
   )
 }

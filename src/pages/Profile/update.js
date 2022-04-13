@@ -1,4 +1,4 @@
-import { ContainerS } from '../../components/ContainerForm';
+import { ContainerS, Section } from '../../components/ContainerForm';
 import { PageTitle } from '../../components/PageTitle';
 import { RowS } from '../../components/ContainerForm';
 import { ButtonS } from '../../components/Button';
@@ -66,7 +66,7 @@ export const Update = () => {
   }, [logged]);
 
   return (
-    <>
+    <Section>
       {logged && (
         <ContainerS>
           <PageTitle>Editar Conta</PageTitle>
@@ -100,7 +100,7 @@ export const Update = () => {
             </RowS>
 
             <ButtonS type="submit">
-              Criar
+              Editar
             </ButtonS>
           </Form>
         </ContainerS>
@@ -110,6 +110,6 @@ export const Update = () => {
           <Alert.Heading>Faça login!</Alert.Heading>
         </Alert>
       )}
-    </>
+    </Section>
   );
 }
