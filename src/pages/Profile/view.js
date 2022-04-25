@@ -39,6 +39,10 @@ export const Profile = () => {
       setLogged(false);
       setShowError(true);
     }
+    else {
+      setLogged(true);
+      setShowError(false);
+    }
 
     const config = {
       headers: { Authorization: `Bearer ${token}` },

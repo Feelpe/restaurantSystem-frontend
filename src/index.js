@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Fonts from './components/fonts/fonts';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavbarS } from './components/Navbar';
 import { FooterS } from './components/Footer';
@@ -15,12 +14,12 @@ import { Mesa } from './pages/Mesa';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-axios.defaults.baseURL = 'https://backend-blueteco.herokuapp.com/';
+// axios.defaults.baseURL = 'https://backend-blueteco.herokuapp.com/';
+axios.defaults.baseURL = 'http://localhost:3333/';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Fonts />
     <NavbarS />
     <BrowserRouter>
       <Routes>

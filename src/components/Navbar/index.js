@@ -6,6 +6,7 @@ import { MdOutlineFoodBank } from 'react-icons/md';
 const NavbarC = styled(Navbar)`
   background-color: #2b222c;
   font-weight: 600;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   
   button{
     background-color: #965d62;
@@ -36,7 +37,7 @@ const MdOutlineFoodBankS = styled(MdOutlineFoodBank)`
 
 export const NavbarS = () => {
   const [logged, setLogged] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [showError, setShowError] = useState(true);
 
   useEffect(() => {
     const token = localStorage.token;
@@ -46,11 +47,11 @@ export const NavbarS = () => {
       setShowError(true);
     }
     else {
-      setLogged(true);
-      setShowError(false);
+      setLogged(true)
+      setShowError(false)
     }
 
-  }, [logged]);
+  }, []);
 
   return (
     <NavbarC expand="lg">
