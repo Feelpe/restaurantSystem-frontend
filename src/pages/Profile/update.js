@@ -1,10 +1,9 @@
-import { ContainerS, Section } from '../../components/ContainerForm';
-import { PageTitle } from '../../components/PageTitle';
-import { RowS } from '../../components/ContainerForm';
-import { ButtonS } from '../../components/Button';
-import { Form, Col, Alert } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { Form, Col, Alert, Row } from 'react-bootstrap';
+import { PageTitle } from '../../components/PageTitle';
+import { ContainerS, Section } from '../../components/CardContainer';
+import { ButtonS } from '../../components/Button';
 
 export const Update = () => {
   const [email, setEmail] = useState('');
@@ -24,11 +23,6 @@ export const Update = () => {
     };
 
     const token = localStorage.token;
-
-    if (!token) {
-      setLogged(false);
-      setShowError(true);
-    }
 
     const config = {
       headers: { Authorization: `Bearer ${token}` },
@@ -71,18 +65,16 @@ export const Update = () => {
         <ContainerS>
           <PageTitle>Editar Conta</PageTitle>
           <Form onSubmit={handleSubmit}>
-            <RowS>
-              <Form.Group as={Col}>
-                <Form.Control 
-                  type='email' 
-                  placeholder={`${user.email}`}
-                  onChange={(event) => setEmail(event.target.value)} 
-                />
-              </Form.Group>
-            </RowS>
+            <Form.Group as={Col} className="m-2">
+              <Form.Control 
+                type='email' 
+                placeholder={`${user.email}`}
+                onChange={(event) => setEmail(event.target.value)} 
+              />
+            </Form.Group>
 
-            <RowS>
-              <Form.Group as={Col}>
+            <Row>
+              <Form.Group as={Col} className="m-2">
                 <Form.Control
                   type="text"
                   placeholder={`${user.firstName}`}
@@ -90,14 +82,14 @@ export const Update = () => {
                 />
               </Form.Group>
 
-              <Form.Group as={Col}>
+              <Form.Group as={Col} className="m-2">
                 <Form.Control
                   type="text"
                   placeholder={`${user.lastName}`}
                   onChange={(event) => setLastName(event.target.value)}
                 />
               </Form.Group>
-            </RowS>
+            </Row>
 
             <ButtonS type="submit">
               Editar

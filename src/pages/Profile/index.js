@@ -1,7 +1,7 @@
 import { Form } from 'react-bootstrap';
 import { PageTitle } from '../../components/PageTitle';
 import { useState } from 'react';
-import { ContainerS, Section } from '../../components/ContainerForm';
+import { ContainerS, Section } from '../../components/CardContainer';
 import { ButtonS } from '../../components/Button'
 import axios from 'axios';
 
@@ -33,7 +33,7 @@ export const Login = () => {
       <ContainerS>
         <PageTitle>Login</PageTitle>
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="m-2" controlId="formBasicEmail">
             <Form.Control
               type="email"
               placeholder="Digite o email"
@@ -42,7 +42,7 @@ export const Login = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="m-2" controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Digite a senha"

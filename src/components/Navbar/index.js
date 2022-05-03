@@ -1,44 +1,17 @@
-import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import { MdOutlineFoodBank } from 'react-icons/md';
-
-const NavbarC = styled(Navbar)`
-  background-color: #2b222c;
-  font-weight: 600;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  
-  button{
-    background-color: #965d62;
-    border: #5e435250;
-    margin: 0.5rem;
-
-    :hover{
-      background-color: #c7956d;
-    }
-  }
-`;
-
-const ContainerS = styled(Container)`
-  align-items: center;
-  
-  a {
-    color: #f2d974;
-    margin: 0.35rem;
-    text-decoration: none;
-  }
-`;
-
-const MdOutlineFoodBankS = styled(MdOutlineFoodBank)`
-  margin: 0rem 1rem 0rem 0rem;
-  padding: 0rem;
-  font-size: 2.5rem;
-`;
+import { Navbar, Nav, Button, Modal } from 'react-bootstrap';
+import { NavbarC, ContainerBar } from '../CardContainer';
+import { FoodBank, ButtonSair } from '../Button';
 
 export const NavbarS = () => {
   const [logged, setLogged] = useState(false);
   const [showError, setShowError] = useState(true);
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const logout = () => localStorage.clear();
+  
   useEffect(() => {
     const token = localStorage.token;
 
@@ -47,16 +20,15 @@ export const NavbarS = () => {
       setShowError(true);
     }
     else {
-      setLogged(true)
-      setShowError(false)
+      setLogged(true);
+      setShowError(false);
     }
-
   }, []);
 
   return (
     <NavbarC expand="lg">
-      <ContainerS>
-        <a href="/"><MdOutlineFoodBankS /></a>
+      <ContainerBar>
+        <a href="/"><FoodBank /></a>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -64,6 +36,7 @@ export const NavbarS = () => {
               <>
                 <a href="/profile">Usuário</a>
                 <a href="/mesas">Mesa</a>
+                <ButtonSair onClick={handleShow}>Sair</ButtonSair>
               </>
             )}
             {showError &&(
@@ -74,7 +47,18 @@ export const NavbarS = () => {
             )}
           </Nav>
         </Navbar.Collapse>
-      </ContainerS>
+      </ContainerBar>
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Você esta saindo</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Tem Certeza que deseja sair de sua conta?</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="danger" onClick={logout}>Sair da Conta</Button>
+        </Modal.Footer>
+      </Modal>
     </NavbarC>
   );
 };

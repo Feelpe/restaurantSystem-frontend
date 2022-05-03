@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Section } from "../../components/ContainerForm";
-import { CardColumn, CardTitle, Title } from '../../components/CardContainer';
-import { CardL } from '../../components/Card';
+import { ContainerColumn, Section } from '../../components/CardContainer';
+import { CardL, CardTitle, Title } from '../../components/Card';
 
 export const Mesa = () => {
   const [mesa, setMesa] = useState([]);
@@ -19,7 +18,7 @@ export const Mesa = () => {
 
   return(
     <Section>
-      <CardColumn>
+      <ContainerColumn>
         <CardTitle>
           <Title>Mesas</Title>
         </CardTitle>
@@ -31,7 +30,7 @@ export const Mesa = () => {
             </CardL>
           </a>
         ))}
-      </CardColumn>
+      </ContainerColumn>
     </Section>
   );
 };

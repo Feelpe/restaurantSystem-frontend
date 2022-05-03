@@ -4,18 +4,12 @@ import { useEffect, useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import { 
-  CardS, 
-  CardColumn, 
-  CardTitle,
-  Title
+  ContainerStart, 
+  ContainerColumn, 
+  Section
 } from '../../components/CardContainer';
-import { GoTrashcanS, BiEditS, ButtonW, ButtonD } from '../../components/Button';
-import { Section } from '../../components/ContainerForm';
-
-const NavButton = styled.div`
-  padding: 0rem;
-  margin: 0rem;
-`;
+import { CardTitle, Title } from '../../components/Card';
+import { Trash, Edit, ButtonW, ButtonD, NavButton } from '../../components/Button';
 
 const Paragrath = styled.p`
   font-size: xx-large;
@@ -57,23 +51,23 @@ export const Profile = () => {
   return (
     <Section>
       {logged && (
-        <CardColumn>
+        <ContainerColumn>
           <CardTitle>
             <Title>Conta</Title>
             <NavButton>
               <a href='/update'>
-                <BiEditS />
+                <Edit />
               </a>
               <ButtonW onClick={handleShow}>
-                <GoTrashcanS />
+                <Trash />
               </ButtonW>
             </NavButton>
           </CardTitle>
-          <CardS>
+          <ContainerStart>
             <h2>{`${user.firstName} ${user.lastName}`}</h2>
             <span>{user.createdAt}</span>
-          </CardS>
-        </CardColumn>
+          </ContainerStart>
+        </ContainerColumn>
       )}
       {showError && (
         <Alert variant="danger">

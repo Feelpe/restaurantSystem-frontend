@@ -1,10 +1,9 @@
-import { ContainerS, Section } from '../../components/ContainerForm';
-import { PageTitle } from '../../components/PageTitle';
-import { RowS } from '../../components/ContainerForm';
-import { ButtonS } from '../../components/Button';
-import { Form, Col } from 'react-bootstrap';
-import { useState } from 'react';
 import axios from 'axios';
+import { useState } from 'react';
+import { Form, Col, Row } from 'react-bootstrap';
+import { ContainerS, Section } from '../../components/CardContainer';
+import { PageTitle } from '../../components/PageTitle';
+import { ButtonS } from '../../components/Button';
 
 export const Register = () => {
   const [email, setEmail] = useState('');
@@ -39,52 +38,49 @@ export const Register = () => {
       <ContainerS>
         <PageTitle>Criar uma Conta</PageTitle>
         <Form onSubmit={handleSubmit}>
-          <RowS>
-            <Form.Group as={Col}>
-              <Form.Control 
-                type='email' 
-                placeholder='Email' 
-                onChange={(event) => setEmail(event.target.value)} 
-              />
-            </Form.Group>
-          </RowS>
+          <Form.Group as={Col} className="m-2">
+            <Form.Control 
+              type='email' 
+              placeholder='Email' 
+              onChange={(event) => setEmail(event.target.value)} 
+            />
+          </Form.Group>
 
-          <RowS>
-            <Form.Group as={Col}>
+          <Row>
+            <Form.Group as={Col} className="m-2">
               <Form.Control
                 type="text"
                 placeholder="Nome"
                 onChange={(event) => setFirstName(event.target.value)}
               />
             </Form.Group>
-
-            <Form.Group as={Col}>
+            <Form.Group as={Col} className="m-2">
               <Form.Control
                 type="text"
                 placeholder="Sobrenome"
                 onChange={(event) => setLastName(event.target.value)}
               />
             </Form.Group>
-          </RowS>
+          </Row>
 
-          <RowS>
-            <Form.Group as={Col}>
+          <Row>
+            <Form.Group as={Col} className="m-2">
               <Form.Control
                 type="password"
                 placeholder="Senha"
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Form.Group>
-            <Form.Group as={Col}>
+            <Form.Group as={Col} className="m-2">
               <Form.Control
                 type="password"
                 placeholder="Confirmação da senha"
                 onChange={(event) => setPasswordConfirmation(event.target.value)}
               />
             </Form.Group>
-          </RowS>
+          </Row>
 
-          <ButtonS type="submit">
+          <ButtonS type="submit" className="mb-4">
             Criar
           </ButtonS>
         </Form>

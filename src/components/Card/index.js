@@ -43,26 +43,19 @@ export const CardL = styled(Card)`
   }
 `;
 
-export const CardAdd = styled(Card)`
-  justify-content: center;
+export const CardTitle = styled.div`
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 4rem;
+  padding: 1rem;
   margin: 0.5rem;
-  padding: 1.5vh;
-  width: 30vh;
-  height: 28vh;
-  background-color: #fff;
-  color: solid;
-  border: #f2d974;
-  border-radius: 1rem;
-  box-shadow: 2px 2px 0.5em #00000090;
-    
-  img {
-    border-radius: 0.7rem;
-    max-width: 25vh;
-    padding: 1vh;
-    :hover {
-      transition: all linear 0.1s;
-      transform: scale(1.1);
-    }
-  }
-`; 
+  box-shadow: 0.2rem 0.2rem 2mm #00000030;
+  border-radius: 0.7rem;
+`;
+
+export const Title = styled.h2`
+  padding: 2rem 0;
+  color: #2b222c;
+`;
