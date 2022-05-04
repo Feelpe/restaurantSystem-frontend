@@ -13,6 +13,7 @@ export const Menu = () => {
   const [logged, setLogged] = useState(false);
   const [menu, setMenu] = useState([]);
   const [show, setShow] = useState(false);
+  const [over, setOver] = useState(false);
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
@@ -22,6 +23,8 @@ export const Menu = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const overClose = () => setOver(false);
+  const overShow = () => setOver(true);
 
   const menuAdd = (event) => {
     event.preventDefault();
@@ -140,7 +143,7 @@ export const Menu = () => {
               />
             </Form.Group>
             <Row>
-              <Row className="ms-3" as={Col}>
+              <Row className="ms-3 me-3" as={Col}>
                 <Form.Select>
                   <option>option</option>
                   <option value="1">One</option>
@@ -148,17 +151,38 @@ export const Menu = () => {
                   <option value="3">Three</option>
                 </Form.Select>
               </Row>
-              <Form.Group className="me-3" as={Col}>
-                <Form.Control
-                  type="imageUrl"
-                  placeholder="Imagem"
-                  onChange={(event) => setOption(event.target.value)}
-                />
-              </Form.Group>
+              <Button 
+                onClick={overShow} 
+                as={Col}
+                sm="3"
+                className="me-4"
+              >
+                Criar uma Opção
+              </Button>
             </Row>
             <Button className="m-3" type='submit'>Adicionar</Button>
           </Form>
         </Modal.Body>
+      </Modal>
+      <Modal show={over} onHide={overClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Adicionar opções para Menu</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={optionAdd}>
+            <Form.Group className="mb-2">
+              <Form.Control
+                type="text"
+                placeholder="Digite uma opção"
+                onChange={(event) => setOption(event.target.value)}
+              />
+            </Form.Group>
+          <Button type='submit'>Enviar</Button>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <small>A opção é uma tag ou caracteristica para um prato ou varios.</small>
+        </Modal.Footer>
       </Modal>
     </>
   );
