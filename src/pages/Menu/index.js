@@ -12,14 +12,17 @@ import { ButtonAdd } from '../../components/Button';
 export const Menu = () => {
   const [logged, setLogged] = useState(false);
   const [menu, setMenu] = useState([]);
-  const [show, setShow] = useState(false);
-  const [over, setOver] = useState(false);
+  const [option, setOption] = useState([]);
+
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  const [name, setOption] = useState('');
-  // const [options, setOptions] = useState([]);
+  const [imageUrl, setImage] = useState('');
+  const [options, setOptions] = useState([]);
+  const [name, setNewOption] = useState('');
+
+  const [show, setShow] = useState(false);
+  const [over, setOver] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,7 +36,8 @@ export const Menu = () => {
       title,
       price,
       description,
-      image,
+      imageUrl,
+      options,
     };
     
     const token = localStorage.token;
@@ -69,9 +73,15 @@ export const Menu = () => {
       });
   };
 
-  const getData = async () => {
+  const getMenu = async () => {
     await axios.get('/menu').then((response) => {
       setMenu(response.data);
+    });
+  };
+
+  const getOption = async () => {
+    await axios.get('/option').then((response) => {
+      setOption(response.data);
     });
   };
 
@@ -85,7 +95,8 @@ export const Menu = () => {
       setLogged(true)
     }
 
-    getData();
+    getMenu();
+    getOption();
   }, []);
 
   return (
@@ -137,18 +148,24 @@ export const Menu = () => {
             </Form.Group>
             <Form.Group className="m-3">
               <Form.Control
-                type="imageUrl"
+                type="text"
                 placeholder="Imagem"
                 onChange={(event) => setImage(event.target.value)}
               />
             </Form.Group>
             <Row>
               <Row className="ms-3 me-3" as={Col}>
-                <Form.Select>
-                  <option>option</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <Form.Select onChange={(event) => setOptions(event.target.value)}>
+                  <option>Característica</option>
+                  {option.map((item) => (
+                    <option 
+                      variant="top" 
+                      key={item.id}
+                      value={item.id} 
+                    >
+                      {item.name}
+                    </option>
+                  ))}
                 </Form.Select>
               </Row>
               <Button 
@@ -174,10 +191,10 @@ export const Menu = () => {
               <Form.Control
                 type="text"
                 placeholder="Digite uma opção"
-                onChange={(event) => setOption(event.target.value)}
+                onChange={(event) => setNewOption(event.target.value)}
               />
             </Form.Group>
-          <Button type='submit'>Enviar</Button>
+            <Button type='submit'>Enviar</Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>

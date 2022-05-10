@@ -25,9 +25,24 @@ export const CardS = styled(Card)`
   }
 `;
 
+export const CardIcon = styled(Card)`
+  max-width: 25vh;
+  width: auto;
+  height: 20vh;
+  border: none;
+  overflow: hidden;
+  
+  img {
+    border-radius: 1rem;
+    max-width: 25vh;
+    width: auto;
+  }
+`;
+
 export const CardL = styled(Card)`
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   width: auto;
   padding: 1rem;
   margin: 0.5rem;
