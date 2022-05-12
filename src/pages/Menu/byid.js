@@ -10,13 +10,13 @@ import { ButtonW, NavButton, Table, Trash, Edit } from '../../components/Button'
 export const Prato = () => {
   const { id } = useParams();
   const [prato, setPrato] = useState([]);
-  const [menu, setMenu] = useState([]);
   const [option, setOption] = useState([]);
-
+  
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [imageUrl, setImage] = useState('');
+  const [menu, setMenu] = useState('');
   const [options, setOptions] = useState([]);
 
   const [table, setTable] = useState(false);
@@ -29,6 +29,18 @@ export const Prato = () => {
   const editShow = () => setEdit(true);
   const trashClose = () => setTrash(false);
   const trashShow = () => setTrash(true);
+
+  useEffect(() => {
+    const getMenu = async () => {
+      await axios.get(`/menu/${id}`).then((response) => {
+        setPrato(response.data)
+      });
+    };
+
+    setMenu(prato.id);
+    getMenu();
+    getOption();
+  }, [id, prato.id]);
 
   const mesaAdd = (event) => {
     event.preventDefault();
@@ -102,18 +114,6 @@ export const Prato = () => {
     });
   };
 
-  useEffect(() => {
-    const getMenu = async () => {
-      await axios.get(`/menu/${id}`).then((response) => {
-        setPrato(response.data)
-      });
-    };
-
-    setMenu(prato.id);
-    getMenu();
-    getOption();
-  }, [id, prato.id]);
-
   return(
     <Section>
       <ContainerColumn>
@@ -148,10 +148,10 @@ export const Prato = () => {
           <Modal.Title>Adicionar Mesa</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Criar mesa com o prato {prato.title}
+          Criar mesa com o prato "{prato.title}"?
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={mesaAdd}>Enviar</Button>
+          <Button onClick={mesaAdd}>Sim</Button>
         </Modal.Footer>
       </Modal>
       <Modal show={edit} onHide={editClose} centered>

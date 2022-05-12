@@ -55,7 +55,6 @@ export const Menu = () => {
         console.log(error.message);
       });
   };
-
   const optionAdd = (event) => {
     event.preventDefault();
 
@@ -72,19 +71,16 @@ export const Menu = () => {
         console.log(error.message);
       });
   };
-
   const getMenu = async () => {
     await axios.get('/menu').then((response) => {
       setMenu(response.data);
     });
   };
-
   const getOption = async () => {
     await axios.get('/option').then((response) => {
       setOption(response.data);
     });
   };
-
   useEffect(() => {
     const token = localStorage.token;
 

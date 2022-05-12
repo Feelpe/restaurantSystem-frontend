@@ -15,8 +15,8 @@ import { Mesa } from './pages/Mesa';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// axios.defaults.baseURL = 'https://backend-blueteco.herokuapp.com/';
-axios.defaults.baseURL = 'http://localhost:3333/';
+axios.defaults.baseURL = 'https://blueteco-backend.vercel.app/';
+// axios.defaults.baseURL = 'http://localhost:3333/';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
