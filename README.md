@@ -3,7 +3,7 @@
 This project was available in [Restaurant System](https://restaurantmenu.vercel.app/).
 
 The idea for this project is to build a system for a restaurant, with login for clients and employees.\
-For the clients a menu and for the employers a system for noting tables and requests.
+For the clients a menu for making the request and for the employers a system for creating the menu and noting requests.
 
 
 ## Run the Project
