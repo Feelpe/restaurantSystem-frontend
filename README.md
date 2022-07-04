@@ -16,7 +16,7 @@ For the clients a menu for making the request and for the employers a system for
 | styled-components | 5.3.3   |
 
 ## Running the app
-Install NodeJS
+Install NodeJS\
 In the project directory, you can run:
 
 ```bash
