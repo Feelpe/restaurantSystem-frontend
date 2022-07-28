@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { ContainerColumn, Section } from '../../components/CardContainer';
-import { CardL, CardTitle, Title } from '../../components/Card';
+import { ContainerColumn, Section } from '../../components/container';
+import { CardL, CardTitle, Title } from '../../components/card';
 
-export const Mesa = () => {
+export const Mesas = () => {
   const [mesa, setMesa] = useState([]);
 
   const getData = async () => {

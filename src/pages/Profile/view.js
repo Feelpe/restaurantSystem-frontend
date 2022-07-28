@@ -7,9 +7,9 @@ import {
   ContainerStart, 
   ContainerColumn, 
   Section
-} from '../../components/CardContainer';
-import { CardTitle, Title } from '../../components/Card';
-import { Trash, Edit, ButtonW, ButtonD, NavButton } from '../../components/Button';
+} from '../../components/container';
+import { CardTitle, Title } from '../../components/card';
+import { Trash, Edit, ButtonW, ButtonD, NavButton } from '../../components/button';
 
 const Paragrath = styled.p`
   font-size: xx-large;

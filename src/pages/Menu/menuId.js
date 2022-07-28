@@ -3,11 +3,11 @@ import Modal from 'react-bootstrap/Modal';
 import { Button, Form, Col, Row } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { ContainerColumn, Section } from '../../components/CardContainer';
-import { CardL, CardTitle, Title, CardIcon } from '../../components/Card';
-import { ButtonW, NavButton, Table, Trash, Edit } from '../../components/Button';
+import { ContainerColumn, Section } from '../../components/container';
+import { CardL, CardTitle, Title, CardIcon } from '../../components/card';
+import { ButtonW, NavButton, Table, Trash, Edit } from '../../components/button';
 
-export const Prato = () => {
+export const MenuId = () => {
   const { id } = useParams();
   const [prato, setPrato] = useState([]);
   const [option, setOption] = useState([]);

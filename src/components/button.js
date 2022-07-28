@@ -4,13 +4,7 @@ import { BiEdit } from 'react-icons/bi';
 import { GoTrashcan } from 'react-icons/go';
 import { MdOutlineFoodBank } from 'react-icons/md';
 import { GiRoundTable } from 'react-icons/gi';
-import adicionar from "../../Assets/images/adicionar.png";
-
-export const FoodBank = styled(MdOutlineFoodBank)`
-  margin: 0rem 1rem 0rem 0rem;
-  padding: 0rem;
-  font-size: 2.5rem;
-`;
+import adicionar from "../Assets/images/adicionar.png";
 
 export const Edit = styled(BiEdit)`
   color: #c7956d;
@@ -104,10 +98,4 @@ export const ButtonAdd = styled.button`
     transition: all linear 0.2s;
     transform: scale(1.1)
   }
-`;
-
-export const ButtonSair = styled.button`
-  background-color: #2b222c !important;
-  color: #f2d974;
-  border: none;
 `;

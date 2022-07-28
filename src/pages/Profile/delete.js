@@ -1,8 +1,8 @@
 import axios from 'axios';
 import styled from 'styled-components';
 import { useEffect } from 'react';
-import { DeleteArea } from '../../components/Button';
-import { Section } from '../../components/CardContainer';
+import { DeleteArea } from '../../components/button';
+import { Section } from '../../components/container';
 
 const Title = styled.h2`
   padding: 2rem 0;

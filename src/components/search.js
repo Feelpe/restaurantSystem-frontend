@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 import { Form, FormControl, Container } from 'react-bootstrap';
-import { ButtonS } from '../Button';
+import { Button } from 'react-bootstrap';
 
 const ContainerS = styled.div`
   background-color: #f8f8f8;
@@ -19,9 +19,9 @@ export const Search = () => {
             className="me-2"
             aria-label="Search"
           />
-          <ButtonS type="submit">
+          <Button type="submit">
             <FaSearch />
-          </ButtonS>
+          </Button> 
         </Form>
       </Container>
     </ContainerS>

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Form, Col, Alert, Row } from 'react-bootstrap';
-import { PageTitle } from '../../components/PageTitle';
-import { ContainerS, Section } from '../../components/CardContainer';
-import { ButtonS } from '../../components/Button';
+import { PageTitle } from '../../components/title';
+import { ContainerS, Section } from '../../components/container';
+import { ButtonS } from '../../components/button';
 
 export const Update = () => {
   const [email, setEmail] = useState('');

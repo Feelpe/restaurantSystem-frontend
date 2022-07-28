@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Form, Col, Row } from 'react-bootstrap';
-import { ContainerS, Section } from '../../components/CardContainer';
-import { PageTitle } from '../../components/PageTitle';
-import { ButtonS } from '../../components/Button';
+import { ContainerS, Section } from '../../components/container';
+import { PageTitle } from '../../components/title';
+import { ButtonS } from '../../components/button';
 
 export const Register = () => {
   const [email, setEmail] = useState('');

@@ -1,8 +1,8 @@
 import { Form } from 'react-bootstrap';
-import { PageTitle } from '../../components/PageTitle';
+import { PageTitle } from '../../components/title';
 import { useState } from 'react';
-import { ContainerS, Section } from '../../components/CardContainer';
-import { ButtonS } from '../../components/Button'
+import { ContainerS, Section } from '../../components/container';
+import { ButtonS } from '../../components/button'
 import axios from 'axios';
 
 export const Login = () => {

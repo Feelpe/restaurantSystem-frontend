@@ -1,10 +1,17 @@
 import styled from 'styled-components';
-import { Container, Row, Navbar } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 
 export const NavbarC = styled(Navbar)`
   background-color: #2b222c;
   font-weight: 600;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  align-items: center;
+
+  a {
+    color: #f2d974;
+    margin: 0.35rem;
+    text-decoration: none;
+  }
   
   button{
     background-color: #965d62;
@@ -12,16 +19,6 @@ export const NavbarC = styled(Navbar)`
     :hover{
       background-color: #c7956d;
     }
-  }
-`;
-
-export const ContainerBar = styled(Container)`
-  align-items: center;
-  
-  a {
-    color: #f2d974;
-    margin: 0.35rem;
-    text-decoration: none;
   }
 `;
 
